@@ -5,18 +5,48 @@
     <title>Pesquisa</title>
   </head>
   <body>
-    <h1>Pesquisa</h1>
-    <h3>Selecione uma cidade para pesquisar</h3>
+    <nav class="navbar navbar-dark bg-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-auto" href="#">
+                <svg viewBox="0 0 78.15 52.01" style="height: 2em;">
+                  <defs>
+                      <style>.cls-1{fill:#ce9178;}.cls-2{fill:#569cd6;}.cls-3{fill:#9cdcfe;}.cls-4{fill:#c586c0;}</style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                      <g id="Layer_1-2" data-name="Layer 1">
+                          <path class="cls-1" d="M78.15,3.21v18A3.2,3.2,0,0,1,75,24.4H57a3.2,3.2,0,0,1-3.21-3.2v-18A3.21,3.21,0,0,1,57,0H75A3.21,3.21,0,0,1,78.15,3.21Z"/>
+                          <path class="cls-2" d="M50.51,3.2V21.13a3.2,3.2,0,0,1-3.2,3.2H3.2A3.2,3.2,0,0,1,0,21.13V3.2A3.2,3.2,0,0,1,3.2,0H47.31A3.21,3.21,0,0,1,50.51,3.2Z"/>
+                          <path class="cls-3" d="M78.15,30.84V48.78A3.2,3.2,0,0,1,75,52H30.84a3.19,3.19,0,0,1-3.19-3.2V30.84a3.19,3.19,0,0,1,3.19-3.19H75A3.2,3.2,0,0,1,78.15,30.84Z"/>
+                          <path class="cls-4" d="M24.4,30.82v18A3.2,3.2,0,0,1,21.2,52h-18A3.2,3.2,0,0,1,0,48.81v-18a3.21,3.21,0,0,1,3.21-3.21h18A3.21,3.21,0,0,1,24.4,30.82Z"/>
+                      </g>
+                  </g>
+              </svg>
+          </a>
+      </div>
+      </nav>
+      <div style="height: 20vh;"></div>
+        <div class="mx-5">
+          <h1 class="p-2 mb-3 display-2 text-center">
+            Pesquise um município
+          </h1>
+          <div style="height: 3vh;"></div>
+          <div class="text-center">
+            <form class="w-100 fs-2" action="/city" method="post">
+              <select class="px-3 py-2 m-0" style="width: 70%;" name="cityName">
+                <option value="São Paulo">São Paulo</option>
+                <option value="São Bernardo">São Bernardo</option>
+                <option value="São Caetano">São Caetano</option>
+                <option value="Jundiaí">Jundiaí</option>
+              </select>
+              <button class="btn pb-2" type="submit" name="submit_button">
+                <svg style="height: 3em;"  aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" role="img" viewBox="0 0 512 512" class="svg-inline--fa fa-search fa-w-16 fa-2x">
+                  <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" class=""></path>
+                </svg>
+              </button>
 
-    <form class="" action="/city" method="post">
-        <select class="" name="cityName">
-          <option value="São Paulo">São Paulo</option>
-          <option value="São Bernardo">São Bernardo</option>
-          <option value="São Caetano">São Caetano</option>
-          <option value="Jundiaí">Jundiaí</option>
-        </select>
-        <button type="submit" name="submit_button">Pesquisar!</button>
-    </form>
+            </form>
+          </div>
+        </div>
 
   </body>
 </html>
