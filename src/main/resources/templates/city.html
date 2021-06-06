@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title th:text="${city.getName()}"></title>
+  </head>
+  <body>
+    <h1 th:text="${city.getName()}">}</h1>
+
+    <table>
+      <tbody>
+        <tr th:each="expense, itemStat : *{expenses}" th:id="*{expenses[__${itemStat.index}__].getId()}">
+          <td><p th:text="*{expenses[__${itemStat.index}__].getName()}"></p></td>
+          <td><p th:text="*{expenses[__${itemStat.index}__].getInfo()}"></p></td>
+          <td><p th:text="*{expenses[__${itemStat.index}__].getValue()}"></p></td>
+          <td>
+            <p th:if="*{expenses[__${itemStat.index}__].getIsConsistent() == 1}">Consistente</p>
+            <p th:unless="*{expenses[__${itemStat.index}__].getIsConsistent() == 1}">Inconsistente</p>  
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
