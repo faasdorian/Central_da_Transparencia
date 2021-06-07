@@ -34,11 +34,17 @@ public class CentralTransparenciaController {
 	@PostMapping("city")
 	@ResponseBody
 	public ModelAndView getCity(@RequestParam MultiValueMap<String, String> body) {
-		ModelAndView view = new ModelAndView("city");
+		ModelAndView view;
+		List<Expense> expenses;
 		City city = service.getCity(body.getFirst("cityName"));
-		List<Expense> expenses = service.getAllExpenses(city.getId());
-		view.addObject("city", city);
-		view.addObject("expenses", expenses);
+		if (city == null) {
+			view = new ModelAndView("missing");
+		} else {
+			expenses = service.getAllExpenses(city.getId());
+			view = new ModelAndView("city");
+			view.addObject("city", city);
+			view.addObject("expenses", expenses);
+		}
 
 		return view;
 	}

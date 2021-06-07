@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Portal não encontrado!</title>
+<link rel="stylesheet"
+	th:href="@{/webjars/bootstrap/5.0.1/css/bootstrap.min.css}">
+</head>
+<body>
+	<nav class="navbar navbar-dark bg-dark ">
+		<div class="container-fluid">
+			<a class="navbar-brand mx-auto" href="/index"> <svg
+					viewBox="0 0 78.15 52.01" style="height: 2em;">
+                  <defs>
+                      <style>
+.cls-1 {
+	fill: #ce9178;
+}
+
+.cls-2 {
+	fill: #569cd6;
+}
+
+.cls-3 {
+	fill: #9cdcfe;
+}
+
+.cls-4 {
+	fill: #c586c0;
+}
+</style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                      <g id="Layer_1-2" data-name="Layer 1">
+                          <path class="cls-1"
+						d="M78.15,3.21v18A3.2,3.2,0,0,1,75,24.4H57a3.2,3.2,0,0,1-3.21-3.2v-18A3.21,3.21,0,0,1,57,0H75A3.21,3.21,0,0,1,78.15,3.21Z" />
+                          <path class="cls-2"
+						d="M50.51,3.2V21.13a3.2,3.2,0,0,1-3.2,3.2H3.2A3.2,3.2,0,0,1,0,21.13V3.2A3.2,3.2,0,0,1,3.2,0H47.31A3.21,3.21,0,0,1,50.51,3.2Z" />
+                          <path class="cls-3"
+						d="M78.15,30.84V48.78A3.2,3.2,0,0,1,75,52H30.84a3.19,3.19,0,0,1-3.19-3.2V30.84a3.19,3.19,0,0,1,3.19-3.19H75A3.2,3.2,0,0,1,78.15,30.84Z" />
+                          <path class="cls-4"
+						d="M24.4,30.82v18A3.2,3.2,0,0,1,21.2,52h-18A3.2,3.2,0,0,1,0,48.81v-18a3.21,3.21,0,0,1,3.21-3.21h18A3.21,3.21,0,0,1,24.4,30.82Z" />
+                      </g>
+                  </g>
+              </svg>
+			</a>
+		</div>
+	</nav>
+	<div style="height: 15vh;"></div>
+	<div class="mb-5 text-center">
+		<svg style="height: 15vh;" aria-hidden="true" focusable="false"
+			data-prefix="fas" data-icon="exclamation-triangle" role="img"
+			viewBox="0 0 576 512"
+			class="svg-inline--fa fa-exclamation-triangle fa-w-18 fa-9x">
+            <path fill="currentColor"
+				d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+				class=""></path>
+        </svg>
+	</div>
+	<div style="margin-left: 2vw;" class="text-center">
+		<h1 class="display-1">Portal não encontrado!</h1>
+		<div class="w-100">
+			<div style="height: 6vh;"></div>
+			<p class="display-6">O portal de informações do município selecionado não foi
+				encontrado!</p>
+			<p class="display-6">Tente novamente em breve.</p>
+		</div>
+	</div>
+
+	<div class="text-center">
+		<div style="height: 13vh;"></div>
+		<form action="/search" method="get">
+			<button
+				style="border-radius: 40px; font-size: 2em; font-weight: 700;"
+				class=" px-5 py-3 btn btn-primary" type="submit" name="button">Voltar à tela de pesquisa</button>
+		</form>
+	</div>
+	</div>
+
+
+	<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>
