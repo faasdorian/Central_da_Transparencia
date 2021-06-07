@@ -7,3 +7,4 @@ O projeto se baseia no usuário selecionar o município do estado de São Paulo 
 É possível que não ser encontrado o portal de algum município, pois há falta de padrão em encontrar esses dados. Nesse caso, essa exceção é retornada ao usuário.
 
 Este é apenas um protótipo, portanto os dados são abstratos e adquiridos de um banco de dados Oracle SQL (fornecido pela faculdade para cada aluno).
+O código para a criação das tabelas no SQL estão no arquivo codigo_tabelas_sql.txt.
