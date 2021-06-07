@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title th:text="${city.getName()}"></title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.0.1/css/bootstrap.min.css}">
   </head>
   <body >
       <nav class="navbar navbar-dark bg-dark ">
@@ -50,6 +51,11 @@
                 </tbody>
             </table>
         </div>
+        
+        
+        
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+		<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
     </body>
 
 </html>
