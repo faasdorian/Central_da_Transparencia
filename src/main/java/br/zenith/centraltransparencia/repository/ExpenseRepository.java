@@ -2,15 +2,18 @@ package br.zenith.centraltransparencia.repository;
 
 import java.util.List;
 
-import org.springframework.data.jdbc.repository.query.Query;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.query.Param;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
-import br.zenith.centraltransparencia.entity.Expense;
+import br.zenith.centraltransparencia.model.Expense;
 
 @Repository
-public interface ExpenseRepository extends JpaRepository<Expense, Integer> {
-	@Query("SELECT * FROM EXPENSES WHERE CITY_ID = :cityId")
-	public List<Expense> findAllExpensesByCityId(@Param("cityId") Integer cityId);
+public interface ExpenseRepository extends CrudRepository<Expense, Long>, PagingAndSortingRepository<Expense, Long> {
+
+	public List<Expense> getExpensesByCityCityId(Long cityId, Pageable pageable);
+
+	public int countAllByCityCityId(Long cityId);
+
 }
